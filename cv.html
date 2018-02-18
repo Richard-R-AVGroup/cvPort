@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<title>Richard Rufh CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="websiteCss.css">
+<script src="jquery-3.3.1.js"></script>
+
+<body onload="init()">
+<div id="header">
+	<h1 style="font-size:50px;">Richard Rufh</h1>
+</div>
+
+<!-- Page Container -->
+<div class="w3-content " style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div id="section" >
+        <div>
+          <img src="pictures/profilePic.jpg" style="width:100%">
+        </div>
+		
+        <div class="subSection">
+			<hr>
+          <p><i class="fa fa-building-o fa-fw " style="color:#33cc33; margin-right:10px;"></i>Toronto, CA</p>
+          <p><i class="fa fa-envelope fa-fw " style="color:#33cc33; margin-right:10px;"></i>richard.rufh@hotmail.com</p>
+          <p><i class="fa fa-mobile fa-fw " style="color:#33cc33; margin-right:10px; font-s"></i>705-331-5173</p>
+          <hr>
+
+          <p><b><i class="fa fa-suitcase fa-fw" style="color:#33cc33; margin-right:10px;"></i>Technical Knowledge</b></p>
+          <p class="normFont"><b>Programming Languages:</b>
+			<br>
+				C++, C#, Java, Javascript, CSS, HTML5.
+			<br>
+		  </p>
+		  <p class="normFont"><b>Game Engines:</b>
+			<br>
+				Unity, Android Studio, Unreal, Gamemaker.
+			<br>
+		  </p>
+		  <p class="normFont"><b>Scripting Software:</b>
+			<br>
+				Visual Studio, Eclipse, Notepad++, Atom.
+			<br>
+		  </p>
+		  <p class="normFont"><b>Other Programs:</b>
+			<br>
+				Audacity, Github, Slack.
+			<br>
+		  </p>
+		  <hr>
+		  <p class="normFont"><b>Professional Skills:</b><br>
+			-Teamwork<br>
+			-Detail Oriented<br>
+			-Adaptable<br>
+			-Innovative<br>
+			-Resourceful<br>
+			-Enthusiastic Student<br>
+			
+		  </p>
+        </div>
+      </div>
+	  <br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div id="section">
+        <h2 style="margin:10px;"><i class="fa fa-book fa-fw" style="color:#33cc33; margin-right:10px;"></i>Education</h2>
+        <div style="padding:20px;">
+          <h3 style="color:white; font-size:25px;"><b>George Brown College</b></h3>
+          <h4 style="color:white;">Game Programming, Sept 2016 - Apr 2019</h4>
+			<p class="normFont">Advanced Diploma
+				<br>
+					Relevent Courses:
+				<br>
+					<p class="normFont" style="padding-left:20px;">
+					 -Game Production / Studio. <br>
+					 -Data Structures and Algorithms <br>
+					 -Game Engine <br>
+					 -Physics Engine <br>
+					 -Mobile Development <br>
+					 -Advanced 3D Programming
+					 </p>
+			</p>
+          <hr>
+        </div>
+      </div>
+
+      <div id="section">
+        <h2 style="margin:10px;"><i class="fa fa-briefcase fa-fw" style="color:#33cc33; margin-right:10px;"></i>Professional Experience</h2>
+        <div style="padding:20px;">
+          <h3 style="color:white; font-size:25px;"><b>Chez Michel</b></h3>
+		  <h4 style="color:white;">Server, May 2014 - Present</h4>
+			<p class="normFont" style="padding-left:20px;">
+				-Opening and closing the business<br>
+				-Trusted with customer finances and information<br>
+				-Work with a team in order to provide the best possible service<br>
+				-Finding solutions to problems that arise<br>
+				-Having daily meetings to discuss work performance and <br>
+				-Constantly learning new material to provide accurate information
+			</p>
+          <hr>
+        </div>
+      </div>
+	  
+	  <div id="section">
+		<h2 style="margin:10px;"><i class="fa fa-desktop fa-fw" style="color:#33cc33; margin-right:10px;"></i>Projects</h2>
+		<div style="padding:20px;">
+			<h3 style="color:white; font-size:25px;"><b>Car Crashers</b></h3>
+			<div id="gallery" style="float:right;">
+				<img src="pictures/cc0.png" id="ccPic0" class="galleryPic active"></img>
+				<img src="pictures/cc1.png" id="ccPic1" class="galleryPic" ></img>
+			</div>
+			
+			<p class="normFont" style="padding-left:20px;">
+				This was a personal project that I developed in 3 weeks. Using only Unity assets
+			</p>
+		</div>
+	  </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer id="footer" class="w3-container">
+	<br>
+</footer>
+
+</body>
+
+<script>
+
+function init()
+{
+	updateGallPic();
+	//console.log(ccImages[0]);
+}
+
+function updateGallPic()
+{	
+	var $active = $("#gallery .active");	
+	var $next = ($active.next().length > 0) ? $active.next() : $("#gallery img:first");
+	$next.css("z-index", 2);
+	$active.fadeOut(1500, function()
+	{
+		$active.css("z-index", 1).show().removeClass("active");
+		$next.css("z-index", 3).addClass("active");
+	})
+	console.log($("#gallery ,active"));
+}
+
+
+</script>
+</html>
