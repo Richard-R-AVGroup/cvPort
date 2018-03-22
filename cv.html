@@ -114,21 +114,23 @@
           <hr>
         </div>
       </div>
-	  
+	  <!--
 	  <div id="section">
 		<h2 style="margin:10px;"><i class="fa fa-desktop fa-fw" style="color:#33cc33; margin-right:10px;"></i>Projects</h2>
 		<div style="padding:20px;">
 			<h3 style="color:white; font-size:25px;"><b>Car Crashers</b></h3>
-			<div id="gallery" style="float:right;">
+			<div id="gallery" >
 				<img src="pictures/cc0.png" id="ccPic0" class="galleryPic active"></img>
 				<img src="pictures/cc1.png" id="ccPic1" class="galleryPic" ></img>
+				<p class="normFont">
+				This was a personal project that I developed in 3 weeks. Using only Unity assets
+				</p>
+				
 			</div>
 			
-			<p class="normFont" style="padding-left:20px;">
-				This was a personal project that I developed in 3 weeks. Using only Unity assets
-			</p>
 		</div>
 	  </div>
+	  -->
 
     <!-- End Right Column -->
     </div>
@@ -150,7 +152,6 @@
 function init()
 {
 	updateGallPic();
-	//console.log(ccImages[0]);
 }
 
 function updateGallPic()
@@ -161,7 +162,7 @@ function updateGallPic()
 	$active.fadeOut(1500, function()
 	{
 		$active.css("z-index", 1).show().removeClass("active");
-		$next.css("z-index", 3).addClass("active");
+		$next.css("z-index", 2).addClass("active");
 	})
 	console.log($("#gallery ,active"));
 }

@@ -79,7 +79,6 @@
 			
 		#section
 			{	
-				
 				padding: 10px;
 				height: auto;
 				margin-left: auto;
@@ -102,20 +101,20 @@
 			
 		#gallery
 		{
-			width: 300px;
-			height:200px;
-			margin:20px;
+			padding-bottom:300px;
+			width:5px;
+			height:5px;
 		}
 			
-		#gallery img{position:absolute; z-index:1;}
+		#gallery img{z-index:1;}
 		#gallery img.active{z-index:3;}
 			
 		.galleryPic
-			{
-				margin:;
-				width:300px;
-				height:200px;
-				position:relative;
+			{			
+				position:absolute;
+				width: 300px;
+				height: 200px;
+				float:right;
 			}
 			
 		.active
@@ -145,8 +144,9 @@
 			
 		.normFont
 			{
-				margin:5px;
+				padding:5px;
 				font-size: 18px;
 				font-style: bold;
 				color:white;
+				z-index:3;
 			}
